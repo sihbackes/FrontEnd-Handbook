@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <span>
+            <button>Click me!</button>
+        </span>
+    </div>
+
+    <script>
+      
+        const div = document.getElementsByTagName("div")[0]
+        div.addEventListener("click", (event) => {
+            if(event.target.tagName === 'BUTTON'){
+                console.log("button clicked")
+            }
+        })
+        
+    </script>
+
+   <!-- ?  Event Delegation   -->
+   <!-- * Event Delegation is a pattern based upon the concept of Event Bubbling. 
+   * It is an event-handling pattern that allows you to handle events at a higher level in the 
+   * DOM tree other than the level where the event was first received. 
+   * With event delegation, instead of handling the click event on the button, you can handle it on the div.
+   * The idea is that you "delegate" the handling of an event to a different element (in this case, the div, which is a parent element) 
+   * instead of the actual element (the button) that received the event. -->
+   
+</body>
+</html>
