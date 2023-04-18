@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="padding: 20px; background-color:azure;">
+    <div style="padding: 20px; background-color: aquamarine; width: max-content;">
+        <span style="display: block; padding: 20px; background-color: bisque;">
+          <button>Click Me!</button>
+        </span>
+      </div>
+
+      <script>
+        const body = document.getElementsByTagName("body")[0]
+        const div = document.getElementsByTagName("div")[0]
+        const span = document.getElementsByTagName("span")[0]
+        const button = document.getElementsByTagName("button")[0]
+
+        body.addEventListener('click', () => {
+          console.log("body was clicked")
+        })
+
+        div.addEventListener('click', () => {
+          console.log("div was clicked")
+        })
+
+        span.addEventListener('click', () => {
+          console.log("span was clicked")
+        })
+
+        button.addEventListener('click', () => {
+            // event.stopPropagation()
+          console.log("button was clicked")
+        })
+      </script>
+
+      <!-- ? Event Bubbling  -->
+      <!-- * Event bubbling is a method of event propagation in the HTML DOM when an event is in an element inside another element, 
+           * and both elements have registered a handle to that event. It is a process that starts with the element that triggered the 
+           * event and then bubbles up to the containing elements in the hierarchy. In event bubbling, the event is first captured and 
+           * handled by the innermost element and then propagated to outer elements. -->
+      <!-- ? How to Stop Event Bubbling  -->
+      <!-- * Event Bubbling is a default behavior for events. But in some cases, you might want to prevent this, is this case you can use stopPropagation() method. -->
+
+</body>
+</html>
